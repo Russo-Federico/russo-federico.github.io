@@ -856,12 +856,19 @@
       <article class="project-card reveal" style="--reveal-delay: 0.35s">
         <p class="project-category">RAG // Embeddings</p>
         <h3 class="project-title">Agentic AI Assistant for Theme Park Operations</h3>
-        <p class="project-desc">Multi-agent application designed to assist theme-park staff.
-          Built the orchestration layer using Python, ADK, and FastMCP. Gemini autonomously decides which
-          agents to call and tools to call.
-          Designed the RAG pipeline around ChromaDB and Gemini's embedding model, using asymmetric query/document
-          embeddings and a similarity-confidence threshold to prevent low-quality
-          matches from reaching the model. Paired with a Vue 3 and TypeScript frontend. </p>
+        <p class="project-desc"> Conversational RAG assistant designed to helps theme-park staff answer guest questions
+          (attractions, wait times,
+          etc.), grounded in a local knowledge base.<br><br>
+
+          Built the orchestration layer in Python as two interchangeable backends behind a single config flag:<br>
+          - an AFC path (default), hand-rolled on Gemini's Automatic Function Calling: Gemini itself decides whether,
+          how often, and with which filters to call the retrieval and live-ops tools;<br>
+          - an ADK path (opt-in), Google ADK multi-agent build where an orchestrator agent delegates to specialized RAG
+          / live-ops sub-agents (as AgentTools).<br><br>
+
+          The default was chosen on measured eval results (AFC 88% vs. ADK 78%). Tools are defined with FastMCP.
+          Designed the RAG pipeline around ChromaDB and Gemini's embedding model. Paired with a Vue 3 + TypeScript
+          frontend.</p>
         <div class="project-footer">
           <div class="tag-row">
             <span class="tag">Python</span>
