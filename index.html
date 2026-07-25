@@ -876,6 +876,31 @@
         <span class="markup-annotation card-annotation ann-right">← my favorite build</span>
       </article>
 
+      <!-- Project 3 -->
+      <article class="project-card reveal" style="--reveal-delay: 0.45s">
+        <p class="project-category">Local Inference // Vision-Language Models</p>
+        <h3 class="project-title">Offline OCR Pipeline with a Local Vision-Language Model</h3>
+        <p class="project-desc">Handwriting-transcription pipeline that runs a multimodal LLM (Gemma 3)
+          entirely on-device through Ollama, with no data leaving the machine.
+          Built the preprocessing step to downscale images and keep GPU memory stable, and tuned inference
+          parameters (zero temperature, VRAM unloading between images) for
+          deterministic, crash-safe batch runs.
+          Constrained the model with a prompt to enforce verbatim transcription and prevent the model
+          from hallucinating illegible content.
+        </p>
+        <div class="project-footer">
+          <div class="tag-row">
+            <span class="tag">Python</span>
+            <span class="tag">Ollama</span>
+            <span class="tag">Gemma 3</span>
+            <span class="tag">Local LLM</span>
+            <span class="tag">Pillow</span>
+          </div>
+          <a href="https://github.com/Russo-Federico/LocalVisionOCR" class="project-link">GitHub&ensp;→</a>
+        </div>
+        <span class="markup-annotation card-annotation ann-right">← runs fully offline</span>
+      </article>
+
     </div>
   </section>
 
